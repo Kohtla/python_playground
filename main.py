@@ -45,5 +45,3 @@ def fib(n):
 def compute(n):
     print(fib(n))
 
-compute()
-
