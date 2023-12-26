@@ -9,7 +9,7 @@ def hammer_server():
     socket = create_connection(SERVER_ADRESS)
 
     while True:
-        send_request(socket=socket, request=20)
+        send_request(socket=socket, request=4)
         request_count+=1
         if time.time() - start > 1:
             print(request_count)
