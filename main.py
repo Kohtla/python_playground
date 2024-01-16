@@ -1,7 +1,5 @@
 import time
 
-print('Hello, world')
-
 # could be simpler
 def remove_duplicates(some_sort_of_string):
     symbols = {}
@@ -20,14 +18,13 @@ def remove_duplicates(some_sort_of_string):
 
     return return_string, total_deleted
 
-print(remove_duplicates('aaabbbac'))
-
 def timer(func):
     def wrapper(*args, **kwargs):
         start = time.time()
-        func(*args, **kwargs)
+        result = func(*args, **kwargs)
         duration = time.time() - start
         print(duration)
+        return result
     return wrapper
 
 @timer
