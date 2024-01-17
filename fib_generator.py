@@ -4,8 +4,7 @@ def fib_generator(num):
     index = 0
     a = 0
     b = 1
-    while index < num:
-        time.sleep(0.1)        
+    while index < num:        
         if index == 0:            
             yield a
         elif index == 1:
@@ -15,6 +14,8 @@ def fib_generator(num):
             yield b
         index+=1
 
-for num in fib_generator(100):
+fib_nums = fib_generator(1000)
+
+for num in fib_nums:
     print(num)
 
