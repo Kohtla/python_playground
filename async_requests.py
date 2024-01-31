@@ -1,6 +1,7 @@
 import asyncio, requests, time
 from main import timer
 
+
 async def make_request(loop, url):
     future = loop.run_in_executor(None, requests.get, url)
     response = await future
@@ -10,7 +11,7 @@ async def make_request(loop, url):
 async def make_requests(number):
     loop = asyncio.get_event_loop()
     results = {}
-    url = 'https://www.google.com'
+    url = "https://www.google.com"
 
     tasks = [make_request(loop, url) for _ in range(number)]
 
