@@ -52,9 +52,8 @@ async def counter(responses: list):
 
 
 async def main():
-    url_to_bomb = "http://google.com"
+    url_to_bomb = "http://localhost:8888/polls"
     batch_size = 100
-    batch_count = 100
 
     responses = []
     tasks = []
